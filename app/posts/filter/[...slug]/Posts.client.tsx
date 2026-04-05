@@ -47,7 +47,7 @@ export default function PostsClient({ userId }: PostsClientProps) {
     setSearchQuery(newQuery);
   }, 300);
 
-  const totalPages = Math.ceil(data.totalCount / 8);
+  const totalPages = data?.totalCount ? Math.ceil(data.totalCount / 8) : 0;
   const posts = data?.posts ?? [];
 
   return (

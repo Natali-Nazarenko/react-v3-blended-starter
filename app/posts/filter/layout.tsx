@@ -6,8 +6,8 @@ type LayoutPostsProps = {
 
 export default function LayoutPosts({ children }: LayoutPostsProps) {
   return (
-    <main className={css.container}>
+    <section className={css.container}>
       <div className={css.postsWrapper}>{children}</div>
-    </main>
+    </section>
   );
 }

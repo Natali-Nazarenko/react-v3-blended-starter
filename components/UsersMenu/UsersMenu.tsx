@@ -16,7 +16,7 @@ export default function UsersMenu() {
 
   const { data: users } = useQuery<User[]>({
     queryKey: ['users'],
-    queryFn: fetchUsers,
+    queryFn: () => fetchUsers(),
   });
 
   const toggleMenu = () => {
